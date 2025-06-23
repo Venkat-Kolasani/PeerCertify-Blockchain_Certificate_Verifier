@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Shield, AlertCircle, CheckCircle, Clock, User, BookOpen, Award, Calendar } from 'lucide-react';
+import { Search, Shield, AlertCircle, CheckCircle, Clock, User, BookOpen, Award, Calendar, Copy } from 'lucide-react';
 import { AlgorandService } from '../services/algorand';
 import { VerificationResult } from '../types/certificate';
 
@@ -8,6 +8,22 @@ export const VerifyCertificate: React.FC = () => {
   const [walletInput, setWalletInput] = useState('');
   const [verifying, setVerifying] = useState(false);
   const [result, setResult] = useState<VerificationResult | null>(null);
+
+  // Demo certificates for easy testing
+  const demoCertificates = [
+    {
+      id: 'cert_react_2024_001',
+      name: 'Advanced React Development',
+      student: 'Alice Johnson',
+      issuer: 'TechAcademy Pro'
+    },
+    {
+      id: 'cert_blockchain_2024_002',
+      name: 'Blockchain Fundamentals & Smart Contracts',
+      student: 'Bob Smith',
+      issuer: 'CryptoUniversity'
+    }
+  ];
 
   const handleVerify = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,6 +52,15 @@ export const VerifyCertificate: React.FC = () => {
     } finally {
       setVerifying(false);
     }
+  };
+
+  const handleDemoCertificateClick = (certificateId: string) => {
+    setSearchInput(certificateId);
+    setWalletInput('DEMO7XVFWK2JGHPQXNVQJDUMXC5NVGM6QJKM3HXLWMZPQJDUMXC5NVGM6Q');
+  };
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
   };
 
   const getStatusIcon = () => {
@@ -72,6 +97,40 @@ export const VerifyCertificate: React.FC = () => {
         </p>
       </div>
 
+      {/* Demo Certificates Section */}
+      <div className="mb-8">
+        <div className="bg-gradient-to-r from-teal-50 to-emerald-50 rounded-2xl p-6 border border-teal-200">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center space-x-2">
+            <Award className="h-5 w-5 text-teal-600" />
+            <span>Try Demo Certificates</span>
+          </h3>
+          <p className="text-sm text-gray-600 mb-4">
+            Click on any demo certificate below to automatically fill the verification form and test the feature.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {demoCertificates.map((cert) => (
+              <div
+                key={cert.id}
+                onClick={() => handleDemoCertificateClick(cert.id)}
+                className="bg-white rounded-xl p-4 border border-gray-200 hover:border-teal-300 hover:shadow-md transition-all duration-200 cursor-pointer group"
+              >
+                <div className="flex items-start justify-between mb-2">
+                  <h4 className="font-semibold text-gray-900 text-sm group-hover:text-teal-700 transition-colors">
+                    {cert.name}
+                  </h4>
+                  <Copy className="h-4 w-4 text-gray-400 group-hover:text-teal-600 transition-colors" />
+                </div>
+                <p className="text-xs text-gray-600 mb-1">Student: {cert.student}</p>
+                <p className="text-xs text-gray-600 mb-2">Issuer: {cert.issuer}</p>
+                <p className="text-xs font-mono text-teal-600 bg-teal-50 px-2 py-1 rounded">
+                  {cert.id}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden mb-8">
         <div className="p-8">
           <form onSubmit={handleVerify} className="space-y-6">
@@ -80,14 +139,25 @@ export const VerifyCertificate: React.FC = () => {
                 <Shield className="h-4 w-4" />
                 <span>Certificate ID *</span>
               </label>
-              <input
-                type="text"
-                value={searchInput}
-                onChange={(e) => setSearchInput(e.target.value)}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
-                placeholder="Enter certificate ID to verify"
-              />
+              <div className="relative">
+                <input
+                  type="text"
+                  value={searchInput}
+                  onChange={(e) => setSearchInput(e.target.value)}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors pr-10"
+                  placeholder="Enter certificate ID to verify"
+                />
+                {searchInput && (
+                  <button
+                    type="button"
+                    onClick={() => copyToClipboard(searchInput)}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-teal-600 transition-colors"
+                  >
+                    <Copy className="h-4 w-4" />
+                  </button>
+                )}
+              </div>
             </div>
 
             <div>
@@ -95,13 +165,24 @@ export const VerifyCertificate: React.FC = () => {
                 <User className="h-4 w-4" />
                 <span>Wallet Address (Optional)</span>
               </label>
-              <input
-                type="text"
-                value={walletInput}
-                onChange={(e) => setWalletInput(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
-                placeholder="Enter wallet address to verify ownership"
-              />
+              <div className="relative">
+                <input
+                  type="text"
+                  value={walletInput}
+                  onChange={(e) => setWalletInput(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors pr-10"
+                  placeholder="Enter wallet address to verify ownership"
+                />
+                {walletInput && (
+                  <button
+                    type="button"
+                    onClick={() => copyToClipboard(walletInput)}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-teal-600 transition-colors"
+                  >
+                    <Copy className="h-4 w-4" />
+                  </button>
+                )}
+              </div>
               <p className="text-xs text-gray-500 mt-1">
                 Leave empty to verify certificate existence only
               </p>
