@@ -257,7 +257,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 PeerCertify. Built on Algorand blockchain for trustless certificate verification.
+              © 2025 PeerCertify. Built on Algorand blockchain for trustless certificate verification.
             </p>
           </div>
         </div>
