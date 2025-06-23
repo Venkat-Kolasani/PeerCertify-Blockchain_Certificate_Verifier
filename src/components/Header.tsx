@@ -24,8 +24,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
               onClick={() => onPageChange('home')}
               className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
             >
-              <Shield className="h-8 w-8 text-blue-600" />
-              <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <Shield className="h-8 w-8 text-teal-600" />
+              <h1 className="text-xl font-bold bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">
                 PeerCertify
               </h1>
             </button>
@@ -35,8 +35,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
                 onClick={() => onPageChange('home')}
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   currentPage === 'home'
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                    ? 'bg-teal-100 text-teal-700'
+                    : 'text-gray-600 hover:text-teal-600 hover:bg-teal-50'
                 }`}
               >
                 <div className="flex items-center space-x-1">
@@ -48,8 +48,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
                 onClick={() => onPageChange('mint')}
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   currentPage === 'mint'
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                    ? 'bg-teal-100 text-teal-700'
+                    : 'text-gray-600 hover:text-teal-600 hover:bg-teal-50'
                 }`}
               >
                 Issue Certificate
@@ -58,8 +58,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
                 onClick={() => onPageChange('verify')}
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   currentPage === 'verify'
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                    ? 'bg-teal-100 text-teal-700'
+                    : 'text-gray-600 hover:text-teal-600 hover:bg-teal-50'
                 }`}
               >
                 Verify Certificate
@@ -68,8 +68,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
                 onClick={() => onPageChange('dashboard')}
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   currentPage === 'dashboard'
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                    ? 'bg-teal-100 text-teal-700'
+                    : 'text-gray-600 hover:text-teal-600 hover:bg-teal-50'
                 }`}
               >
                 Dashboard
@@ -78,8 +78,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
                 onClick={() => onPageChange('admin')}
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   currentPage === 'admin'
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                    ? 'bg-teal-100 text-teal-700'
+                    : 'text-gray-600 hover:text-teal-600 hover:bg-teal-50'
                 }`}
               >
                 Admin Panel
@@ -92,8 +92,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
             
             {connected ? (
               <div className="flex items-center space-x-3">
-                <div className="flex items-center space-x-2 px-3 py-2 bg-green-50 text-green-700 rounded-lg">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="flex items-center space-x-2 px-3 py-2 bg-emerald-50 text-emerald-700 rounded-lg">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
                   <span className="text-sm font-medium">{formatAddress(address!)}</span>
                 </div>
                 <button
@@ -107,7 +107,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => 
               <button
                 onClick={connectWallet}
                 disabled={loading}
-                className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 disabled:opacity-50"
+                className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-lg hover:from-teal-700 hover:to-emerald-700 transition-all duration-200 disabled:opacity-50"
               >
                 <Wallet className="h-4 w-4" />
                 <span>{loading ? 'Connecting...' : 'Connect Wallet'}</span>

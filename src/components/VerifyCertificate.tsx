@@ -42,7 +42,7 @@ export const VerifyCertificate: React.FC = () => {
     if (!result) return null;
     
     if (result.isValid && result.ownershipVerified) {
-      return <CheckCircle className="h-8 w-8 text-green-600" />;
+      return <CheckCircle className="h-8 w-8 text-emerald-600" />;
     } else if (result.isValid && !result.ownershipVerified) {
       return <AlertCircle className="h-8 w-8 text-yellow-600" />;
     } else {
@@ -54,7 +54,7 @@ export const VerifyCertificate: React.FC = () => {
     if (!result) return '';
     
     if (result.isValid && result.ownershipVerified) {
-      return 'border-green-200 bg-green-50';
+      return 'border-emerald-200 bg-emerald-50';
     } else if (result.isValid && !result.ownershipVerified) {
       return 'border-yellow-200 bg-yellow-50';
     } else {
@@ -85,7 +85,7 @@ export const VerifyCertificate: React.FC = () => {
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                 placeholder="Enter certificate ID to verify"
               />
             </div>
@@ -99,7 +99,7 @@ export const VerifyCertificate: React.FC = () => {
                 type="text"
                 value={walletInput}
                 onChange={(e) => setWalletInput(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                 placeholder="Enter wallet address to verify ownership"
               />
               <p className="text-xs text-gray-500 mt-1">
@@ -110,7 +110,7 @@ export const VerifyCertificate: React.FC = () => {
             <button
               type="submit"
               disabled={verifying || !searchInput.trim()}
-              className="w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 focus:ring-4 focus:ring-blue-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-lg hover:from-teal-700 hover:to-emerald-700 focus:ring-4 focus:ring-teal-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {verifying ? (
                 <>
@@ -146,8 +146,8 @@ export const VerifyCertificate: React.FC = () => {
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-lg font-semibold text-gray-900">Certificate Details</h4>
                   <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-sm text-green-700 font-medium">Verified on Blockchain</span>
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                    <span className="text-sm text-emerald-700 font-medium">Verified on Blockchain</span>
                   </div>
                 </div>
 
@@ -223,7 +223,7 @@ export const VerifyCertificate: React.FC = () => {
                       {result.certificate.metadata.skills.map((skill, index) => (
                         <span
                           key={index}
-                          className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                          className="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full"
                         >
                           {skill}
                         </span>

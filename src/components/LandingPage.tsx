@@ -9,14 +9,14 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16 pb-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-teal-50 via-white to-emerald-50 pt-16 pb-32">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center mb-8">
               <div className="flex items-center space-x-3 px-6 py-3 bg-white/80 backdrop-blur-lg rounded-full border border-gray-200 shadow-lg">
-                <Shield className="h-8 w-8 text-blue-600" />
-                <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <Shield className="h-8 w-8 text-teal-600" />
+                <span className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">
                   PeerCertify
                 </span>
               </div>
@@ -25,7 +25,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Verify Certificates.
               <br />
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">
                 Trustless. Tamper-proof.
               </span>
             </h1>
@@ -38,7 +38,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <button
                 onClick={() => onPageChange('mint')}
-                className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="group px-8 py-4 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-xl hover:from-teal-700 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 <div className="flex items-center space-x-2">
                   <Award className="h-5 w-5" />
@@ -49,7 +49,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
               
               <button
                 onClick={() => onPageChange('verify')}
-                className="group px-8 py-4 bg-white text-gray-700 rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="group px-8 py-4 bg-white text-gray-700 rounded-xl border-2 border-gray-200 hover:border-teal-300 hover:bg-teal-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="h-5 w-5" />
@@ -91,10 +91,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
             {/* Step 1 */}
             <div className="text-center group">
               <div className="relative mb-8">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-teal-600 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                   <Award className="h-10 w-10 text-white" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-bold">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center text-sm font-bold">
                   1
                 </div>
               </div>
@@ -107,10 +107,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
             {/* Step 2 */}
             <div className="text-center group">
               <div className="relative mb-8">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                   <Lock className="h-10 w-10 text-white" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-sm font-bold">
                   2
                 </div>
               </div>
@@ -123,10 +123,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
             {/* Step 3 */}
             <div className="text-center group">
               <div className="relative mb-8">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                <div className="w-20 h-20 bg-gradient-to-r from-cyan-600 to-teal-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                   <CheckCircle className="h-10 w-10 text-white" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-bold">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center text-sm font-bold">
                   3
                 </div>
               </div>
@@ -140,7 +140,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose PeerCertify?</h2>
@@ -151,8 +151,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                <Shield className="h-6 w-6 text-blue-600" />
+              <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-6">
+                <Shield className="h-6 w-6 text-teal-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Tamper-Proof Security</h3>
               <p className="text-gray-600">
@@ -161,8 +161,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                <Globe className="h-6 w-6 text-purple-600" />
+              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                <Globe className="h-6 w-6 text-emerald-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Global Accessibility</h3>
               <p className="text-gray-600">
@@ -171,8 +171,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-                <Users className="h-6 w-6 text-green-600" />
+              <div className="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-6">
+                <Users className="h-6 w-6 text-cyan-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Institutional Trust</h3>
               <p className="text-gray-600">
@@ -184,12 +184,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-24 bg-gradient-to-r from-teal-600 to-emerald-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Certificate Verification?
           </h2>
-          <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-teal-100 mb-12 max-w-2xl mx-auto">
             Join the future of trustless, blockchain-based certificate verification. 
             Start issuing or verifying certificates today.
           </p>
@@ -197,13 +197,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => onPageChange('mint')}
-              className="px-8 py-4 bg-white text-blue-600 rounded-xl hover:bg-gray-50 transition-colors duration-300 shadow-lg hover:shadow-xl font-semibold"
+              className="px-8 py-4 bg-white text-teal-600 rounded-xl hover:bg-gray-50 transition-colors duration-300 shadow-lg hover:shadow-xl font-semibold"
             >
               Start Issuing Certificates
             </button>
             <button
               onClick={() => onPageChange('verify')}
-              className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+              className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-xl hover:bg-white hover:text-teal-600 transition-all duration-300 font-semibold"
             >
               Verify a Certificate
             </button>
@@ -217,7 +217,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <Shield className="h-8 w-8 text-blue-400" />
+                <Shield className="h-8 w-8 text-teal-400" />
                 <span className="text-2xl font-bold">PeerCertify</span>
               </div>
               <p className="text-gray-400 mb-6 max-w-md">

@@ -94,13 +94,13 @@ export const MintCertificate: React.FC = () => {
       </div>
 
       {success && (
-        <div className="mb-8 p-6 bg-green-50 border border-green-200 rounded-xl">
+        <div className="mb-8 p-6 bg-emerald-50 border border-emerald-200 rounded-xl">
           <div className="flex items-center space-x-3">
-            <CheckCircle className="h-8 w-8 text-green-600" />
+            <CheckCircle className="h-8 w-8 text-emerald-600" />
             <div>
-              <h3 className="text-lg font-semibold text-green-800">Certificate Minted Successfully!</h3>
-              <p className="text-green-700">Token ID: #{success.tokenId}</p>
-              <p className="text-sm text-green-600 mt-1">
+              <h3 className="text-lg font-semibold text-emerald-800">Certificate Minted Successfully!</h3>
+              <p className="text-emerald-700">Token ID: #{success.tokenId}</p>
+              <p className="text-sm text-emerald-600 mt-1">
                 Your certificate has been permanently recorded on the Algorand blockchain.
               </p>
             </div>
@@ -129,7 +129,7 @@ export const MintCertificate: React.FC = () => {
                   value={formData.studentName}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                   placeholder="Enter student's full name"
                 />
               </div>
@@ -145,7 +145,7 @@ export const MintCertificate: React.FC = () => {
                   value={formData.courseName}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                   placeholder="Enter course title"
                 />
               </div>
@@ -161,7 +161,7 @@ export const MintCertificate: React.FC = () => {
                   value={formData.issuerName}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                   placeholder="Institution or platform name"
                 />
               </div>
@@ -176,7 +176,7 @@ export const MintCertificate: React.FC = () => {
                   name="duration"
                   value={formData.duration}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                   placeholder="e.g., 8 weeks, 40 hours"
                 />
               </div>
@@ -191,7 +191,7 @@ export const MintCertificate: React.FC = () => {
                 value={formData.description}
                 onChange={handleInputChange}
                 rows={3}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                 placeholder="Brief description of the course content and learning outcomes"
               />
             </div>
@@ -206,7 +206,7 @@ export const MintCertificate: React.FC = () => {
                   name="skills"
                   value={formData.skills}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                   placeholder="React, TypeScript, Blockchain (comma-separated)"
                 />
               </div>
@@ -220,7 +220,7 @@ export const MintCertificate: React.FC = () => {
                   name="grade"
                   value={formData.grade}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                   placeholder="A+, 95%, Pass, etc."
                 />
               </div>
@@ -230,7 +230,7 @@ export const MintCertificate: React.FC = () => {
               <button
                 type="submit"
                 disabled={minting || !connected}
-                className="w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 focus:ring-4 focus:ring-blue-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-lg hover:from-teal-700 hover:to-emerald-700 focus:ring-4 focus:ring-teal-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {minting ? (
                   <>
