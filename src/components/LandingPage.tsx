@@ -58,6 +58,21 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onPageChange }) => {
                 </div>
               </button>
             </div>
+
+            {/* Built with Bolt Badge */}
+            <div className="flex justify-center mb-8">
+              <a
+                href="https://bolt.new"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                <span className="text-sm font-semibold">Built with Bolt</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
